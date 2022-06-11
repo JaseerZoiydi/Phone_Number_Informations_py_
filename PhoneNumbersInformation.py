@@ -13,7 +13,7 @@ def carrier_number(number) :
     service_number = phonenumbers.parse(number, "RO")
     print(carrier.name_for_number(service_number, "en"))
 
-#Number_Information
+#Get_Numbers_Information
 numbers = open('numbers.txt','r')
 number = numbers.readline()
 location_number(number)
