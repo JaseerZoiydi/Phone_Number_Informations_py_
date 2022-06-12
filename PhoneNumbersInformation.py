@@ -1,6 +1,9 @@
 #libraries
 import phonenumbers
 
+#numbers
+numbers = ["+19159969739","+21620212121"]
+
 #Function_Location_Number
 def location_number(number) :
     from phonenumbers import geocoder
@@ -13,13 +16,7 @@ def carrier_number(number) :
     service_number = phonenumbers.parse(number, "RO")
     print(carrier.name_for_number(service_number, "en"))
 
-#Get_Numbers_Information
-numbers = open('numbers.txt','r')
-number = numbers.readline()
-location_number(number)
-carrier_number(number)
-while (numbers != "") :
-    number = numbers.readline()
+#Number_Information
+for number in numbers :
     location_number(number)
     carrier_number(number)
-numbers.close()
